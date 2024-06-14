@@ -34,10 +34,6 @@ With the expense tracking feature, users can easily monitor and categorize their
 
 The Income Tracker feature allows users to conveniently track their various sources of income. Users can input the amount, date, and indicate whether the income is taxable or not.
 
-### - Tax Calculation
-
-The financial management application simplifies tax calculation. Users can input their income, deductions, and filing status in a user-friendly interface. Utilizing up-to-date tax regulations and algorithms, the application quickly estimates tax liability. Users can make informed financial decisions based on the calculated tax obligations.
-
 ### - Budget Planner
 
 The budget planner feature allows users to enter their desired amounts for needs, wants, and savings categories. It enables users to compare their allocations with the 50/30/20 system based on their income after taxes. This helps users effectively manage their finances and maintain a balanced budget.
@@ -52,17 +48,3 @@ To ensure data privacy and security, the financial management application incorp
 - Css
 - Redux
 - Firebase
-
-## Contact
-
-Vladislav Lychak - [@LinkedIn](https://www.linkedin.com/in/vladislav-lychak/) - lycakvladislav@gmail.com
-
-Project Link: [https://budget-buddy-finance.netlify.app](https://budget-buddy-finance.netlify.app)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/
