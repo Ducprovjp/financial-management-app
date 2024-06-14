@@ -113,9 +113,6 @@ const ExpenseForm = ({ expenseToUpdate, setExpenseToUpdate }) => {
                 money.totalCash -
                 (expenseToUpdate.pay === "Tiền mặt"
                   ? parseFloat(expenseToUpdate.amount)
-                  : 0) +
-                (newExpense.pay === "Tiền mặt"
-                  ? parseFloat(newExpense.amount)
                   : 0),
               totalCard:
                 money.totalCard -

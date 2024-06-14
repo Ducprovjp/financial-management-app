@@ -35,8 +35,8 @@ function IncomeForm() {
   const [inputError, setInputError] = useState("");
 
   const optionsPay = [
-    { value: "Cash", label: "Tiền mặt" },
-    { value: "Card", label: "Thẻ" },
+    { value: "Tiền mặt", label: "Tiền mặt" },
+    { value: "Thẻ", label: "Thẻ" },
   ];
 
   const handleAddIncome = useCallback(
@@ -82,11 +82,11 @@ function IncomeForm() {
         dispatch(addIncomeAction(income));
 
         const totalCash = incomes
-          .filter((item) => item.type === "Cash")
+          .filter((item) => item.type === "Tiền mặt")
           .reduce((total, item) => total + parseFloat(item.amount), 0);
 
         const totalCard = incomes
-          .filter((item) => item.type === "Card")
+          .filter((item) => item.type === "Thẻ")
           .reduce((total, item) => total + parseFloat(item.amount), 0);
 
         const userDocRef = doc(firestore, "users", currentUser?.uid);
@@ -100,9 +100,11 @@ function IncomeForm() {
             incomes: [income],
             money: {
               totalCash:
-                incomeItem.type === "Cash" ? parseFloat(incomeItem.amount) : 0,
+                incomeItem.type === "Tiền mặt"
+                  ? parseFloat(incomeItem.amount)
+                  : 0,
               totalCard:
-                incomeItem.type === "Card" ? parseFloat(incomeItem.amount) : 0,
+                incomeItem.type === "Thẻ" ? parseFloat(incomeItem.amount) : 0,
               totalMoney: parseFloat(incomeItem.amount),
             },
           });
@@ -116,14 +118,12 @@ function IncomeForm() {
               ...money,
               totalCash:
                 totalCash +
-                (incomeItem.type === "Cash"
+                (incomeItem.type === "Tiền mặt"
                   ? parseFloat(incomeItem.amount)
                   : 0),
               totalCard:
                 totalCard +
-                (incomeItem.type === "Card"
-                  ? parseFloat(incomeItem.amount)
-                  : 0),
+                (incomeItem.type === "Thẻ" ? parseFloat(incomeItem.amount) : 0),
               totalMoney: totalAmount + parseFloat(incomeItem.amount),
             },
           });
@@ -139,7 +139,7 @@ function IncomeForm() {
           date: new Date(),
         });
         setInputError("");
-        setDropdownPlaceholder("Type of Income");
+        setDropdownPlaceholder("Loại tiền thu nhập");
       } catch (error) {
         console.error("Error updating document: ", error);
         setInputError("Failed to add income. Please try again.");

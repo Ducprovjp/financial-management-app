@@ -41,7 +41,7 @@ export function AuthProvider({ children }) {
             incomes: {},
             expenses: {},
             money: {
-              totalCard: 1000,
+              totalCard: 0,
               totalCash: 0,
               totalSavings: 0,
               totalMoney: 0,

@@ -86,12 +86,16 @@ const ExpenseStats = () => {
         <DateChange
           onChange={handleFromChange}
           value={dates.from}
-          desc={"From:"}
+          desc={"Từ ngày:"}
         />
-        <DateChange onChange={handleToChange} value={dates.to} desc={"To:"} />
+        <DateChange
+          onChange={handleToChange}
+          value={dates.to}
+          desc={"Đến ngày:"}
+        />
       </div>
       <p>
-        Your total expenses:{" "}
+        Tổng số tiền đã chi của bạn:{" "}
         <span className={styles.number}>
           {formatNumber(totalExpense) + " Đồng"}
         </span>
@@ -101,7 +105,7 @@ const ExpenseStats = () => {
       </div>
       <Link to={"/expense-tracker"} className={styles.link}>
         {" "}
-        Show full list
+        Xem tất cả danh sách
       </Link>
     </div>
   );

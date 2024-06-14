@@ -70,7 +70,7 @@ const SideBar = ({ setSideMenu, sideMenu }) => {
               test="test-planner"
             />
           </ul>
-          {/* <div
+          <div
             className={styles.point}
             onClick={handleLogout}
             name="logout"
@@ -80,7 +80,7 @@ const SideBar = ({ setSideMenu, sideMenu }) => {
               <LogOut className={styles.icon} />
               <span>Log out</span>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

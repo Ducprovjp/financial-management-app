@@ -65,6 +65,7 @@ const MainStats = () => {
         <ExpenseStats />
       </div>
       <div className={styles.notify}>
+        Cảnh báo chi tiêu:
         {expenseWarnings.length > 0 && (
           <ul>
             {expenseWarnings.map((warning, index) => (
