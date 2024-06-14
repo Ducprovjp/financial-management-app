@@ -58,7 +58,7 @@ const MainStats = () => {
   return (
     <section className={styles.section}>
       <div className={styles.money}>
-        <h2 className={styles.title}>Your Financial Summary</h2>
+        <h2 className={styles.title}>Tổng hợp số dư</h2>
         <MoneyStats />
       </div>
       <div className={styles.expense}>
