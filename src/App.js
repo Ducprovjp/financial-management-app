@@ -3,9 +3,9 @@ import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "./firebase";
 import { Routes, Route, HashRouter, Router } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
-import PrivateRoute from "./pages/PrivateRoute";
+// import LoginPage from "./pages/LoginPage";
+// import SignupPage from "./pages/SignupPage";
+// import PrivateRoute from "./pages/PrivateRoute";
 import "./index.css";
 import IncomeCounter from "./components/Income/IncomeCounter/IncomeCounter";
 import BudgetPlanner from "./components/Budget/BudgetPlanner/BudgetPlanner";
@@ -33,46 +33,38 @@ function App() {
           index
           path="/"
           element={
-            <PrivateRoute>
-              <MainPage>
-                <MainStats />
-              </MainPage>
-            </PrivateRoute>
+            <MainPage>
+              <MainStats />
+            </MainPage>
           }
         />
         <Route
           index
           path="/income-tracker"
           element={
-            <PrivateRoute>
-              <MainPage>
-                <IncomeCounter />
-              </MainPage>
-            </PrivateRoute>
+            <MainPage>
+              <IncomeCounter />
+            </MainPage>
           }
         />
         <Route
           path="/expense-tracker"
           element={
-            <PrivateRoute>
-              <MainPage>
-                <ExpenseTracker />
-              </MainPage>
-            </PrivateRoute>
+            <MainPage>
+              <ExpenseTracker />
+            </MainPage>
           }
         />
         <Route
           path="/budget-planner"
           element={
-            <PrivateRoute>
-              <MainPage>
-                <BudgetPlanner />
-              </MainPage>
-            </PrivateRoute>
+            <MainPage>
+              <BudgetPlanner />
+            </MainPage>
           }
         />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+        {/* <Route path="/login" element={<LoginPage />} /> */}
+        {/* <Route path="/signup" element={<SignupPage />} /> */}
       </Routes>
     </HashRouter>
   );

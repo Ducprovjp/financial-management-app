@@ -159,7 +159,7 @@ const BudgetForm = ({ budgetToUpdate, setBudgetToUpdate }) => {
       }
     },
     [
-      currentUser?.uid,
+      currentUser.uid,
       budgetItem.amount,
       budgetItem.type,
       budgetItem.description,
